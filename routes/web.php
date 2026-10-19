@@ -95,7 +95,7 @@ Route::get('/mahasiswa', function () {
 Route::post('/mahasiswa', function (Request $request) {
     $data = $request->validate([
         // Disesuaikan dengan tabel Pertemuan 4: nim CHAR(10)
-        'nim' => ['required', 'string', 'max:10'],
+        'nim' => ['required', 'string', 'max:12'],
         'nama' => ['required', 'string', 'max:100'],
         'email' => ['required', 'email', 'max:100'],
         // Disesuaikan dengan CHECK pada tabel Pertemuan 4: usia 17 sampai 60
